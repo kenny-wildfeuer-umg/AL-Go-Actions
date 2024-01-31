@@ -36,6 +36,9 @@ inputs:
 runs:
   using: composite
   steps:
+    - name: runBefore
+      shell: bash
+      run: "echo hello"
     - name: run
       shell: ${{ inputs.shell }}
       env:
