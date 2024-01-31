@@ -38,7 +38,7 @@ runs:
   steps:
     - name: runBefore
       shell: bash
-      run: "echo hello"
+      run: sudo apt-get update && sudo apt-get install -y dotnet-sdk-5.0
     - name: run
       shell: ${{ inputs.shell }}
       env:
